@@ -1,0 +1,6 @@
+* Description
+このリポジトリはProject Eulerをいろいろな言語で解いてみるリポジトリです。
+* Link
+[[https://projecteuler.net/][Project Euler]]
+[[http://odz.sakura.ne.jp/projecteuler/][Project Euler(日本語訳)]]
+
