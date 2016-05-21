@@ -1,4 +1,5 @@
-pragma(msg, solve);
+//die
+//pragma(msg, solve);
 
 int solve()
 {
