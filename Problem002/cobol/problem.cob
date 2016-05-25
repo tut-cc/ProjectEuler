@@ -1,0 +1,28 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PROBLEM002.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 FIB1       PIC 9(10) VALUE 0.
+       01 FIB2       PIC 9(10) VALUE 1.
+       01 TEMP       PIC 9(10).
+       01 DUMMY      PIC 9(01).
+       01 DIV2       PIC 9(01).
+       01 RESULT     PIC 9(10) VALUE 0.
+       01 DISPRESULT PIC ZZZZZZZZZ9.
+
+       PROCEDURE DIVISION.
+         PERFORM UNTIL RESULT > 4000000
+           COMPUTE TEMP = FIB1 + FIB2
+           MOVE FIB1 TO FIB2
+           MOVE TEMP TO FIB1
+
+           DIVIDE FIB1 BY 2 GIVING DUMMY REMAINDER DIV2
+           IF DIV2 = 0
+             ADD FIB1 TO RESULT
+           END-IF
+         END-PERFORM
+
+         MOVE RESULT TO DISPRESULT
+         DISPLAY DISPRESULT
+         STOP RUN.
