@@ -104,7 +104,7 @@ let input =
   ]
 
 (* Using operations on arbitrary-precision numbers. *)
-(* Yeah, I know that isn't good for me. this problem probably uses arrays.*)
+(* Yeah, I know that isn't good for me. This problem probably uses arrays.*)
 
 let () = File.lines_of "input_euler013.txt"
          |> Enum.map Num.of_string
