@@ -49,6 +49,6 @@ void main()
     // 最the高
     recurrence!((a, n) => a[n-1]+n+1L)(1L)
         .filter!(a => a.divs >= 500)
-        .take(1).writeln;
+        .front.writeln;
 }
 
