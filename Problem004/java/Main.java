@@ -1,6 +1,5 @@
 class Main{
 	public static void main(String[] args){
-		System.out.println(isKaibun(1234321));
 		int max = 0;
 		for(int i=100;i<=999;i++){
 			for(int j=100;j<=999;j++){
