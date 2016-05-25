@@ -1,0 +1,34 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PROBLEM003.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 I           PIC 9(12).
+       01 PROBNUM     PIC 9(12) VALUE 600851475143.
+       01 PNSQRT      PIC 9(12).
+       01 CURPN       PIC 9(12).
+       01 TEMP        PIC 9(12).
+       01 RMNDR       PIC 9(12).
+       01 RESULT      PIC 9(12) VALUE 0.
+       01 DISPRESULT  PIC ZZZZZZZZZZZ9.
+
+       PROCEDURE DIVISION.
+         COMPUTE PNSQRT = FUNCTION SQRT(PROBNUM)
+
+         MOVE PROBNUM TO CURPN
+         PERFORM VARYING I FROM 2 BY 1 UNTIL I > PNSQRT
+           MOVE 0 TO RMNDR
+           PERFORM WITH TEST AFTER UNTIL RMNDR NOT = 0
+             DIVIDE CURPN BY I GIVING TEMP REMAINDER RMNDR
+             IF RMNDR = 0
+               MOVE TEMP TO CURPN
+               IF I > RESULT
+                 MOVE I TO RESULT
+               END-IF
+             END-IF
+           END-PERFORM
+         END-PERFORM
+
+         MOVE RESULT TO DISPRESULT
+         DISPLAY DISPRESULT
+         STOP RUN.
