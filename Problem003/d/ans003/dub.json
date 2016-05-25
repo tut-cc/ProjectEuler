@@ -1,0 +1,12 @@
+{
+	"name": "ans003",
+	"authors": [
+		"Kazuki Komatsu"
+	],
+	"dependencies": {
+		"carbon": "~>1.7.0"
+	},
+	"description": "An answer of PE003",
+	"copyright": "Copyright © 2016, Kazuki Komatsu",
+	"license": "NYSL"
+}
