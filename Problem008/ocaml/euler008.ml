@@ -25,15 +25,13 @@ let input = String.concat "" @@ String.nsplit ~by:"\n" @@ "
 
 let len_input = (String.length input) - 13
 
-let rec solve max_mul i =
+let rec solve i max_mul =
   if len_input < i then max_mul
-  else
-    let max_mul' = String.slice ~first:i ~last:(i + 13) input
-                   |> String.enum
-                   |> Enum.map (Num.of_string % String.of_char)
-                   |> Enum.reduce Num.mul
-                   |> Num.max_num max_mul
-    in
-    solve max_mul' (i + 1)
+  else solve (i + 1)
+    (String.slice ~first:i ~last:(i + 13) input
+     |> String.enum
+     |> Enum.map (Num.of_string % String.of_char)
+     |> Enum.reduce Num.mul
+     |> Num.max_num max_mul)
 
-let () = Num.print stdout @@ solve (Num.one) 0
+let () = Num.print stdout @@ solve 0 Num.one

@@ -1,0 +1,1 @@
+(* Everyone loves one-liner, aren't they? :) *)open Batteries let lcm a b = let rec gcd m n = if n = 0 then m else gcd n (m mod n) in a / (gcd a b) * b let () = Int.print stdout @@ Enum.reduce lcm (1 -- 20)
