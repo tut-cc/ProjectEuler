@@ -3,10 +3,7 @@ use std::fmt::Debug;
 use std::cmp;
 
 fn convert_from_str<T: FromStr>(line: &str) -> Vec<T> where T::Err : Debug {
-    line.split_whitespace()
-        .map(
-            |x| x.parse::<T>().unwrap()
-            ).collect()
+    line.split_whitespace().map(|x| x.parse::<T>().unwrap()).collect()
 }
 
 fn main() {
