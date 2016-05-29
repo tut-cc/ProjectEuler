@@ -13,6 +13,10 @@ uint solve()
 }
 
 
+// メモリ食い過ぎて死ぬ
+//pragma(msg, solve());
+
+
 void main()
 {
     writeln(solve());
