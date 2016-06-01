@@ -15,4 +15,4 @@ for a in range(1, N + 1):
     else:
         seq[a - 1] = c
 
-print(max(*((i + 1, a) for i, a in enumerate(seq)), key = lambda x : x[-1])[0])
+print(max(((i + 1, a) for i, a in enumerate(seq)), key = lambda x : x[-1])[0])
