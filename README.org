@@ -2,6 +2,6 @@
 - このリポジトリはProject Eulerをいろいろな言語で解いてみるリポジトリです。
 - 新しい言語を追加するときに必要であれば.gitignoreを編集して使いやすいようにして下さい
 * Link
-[[https://projecteuler.net/][- Project Euler]]
-[[http://odz.sakura.ne.jp/projecteuler/][- Project Euler(日本語訳)]]
+- [[https://projecteuler.net/][Project Euler]]
+- [[http://odz.sakura.ne.jp/projecteuler/][Project Euler(日本語訳)]]
 
